@@ -142,19 +142,3 @@
 
 - 테이블(Citizen) 데이터 관리 JSTL (List) 
 ![jstl list](https://user-images.githubusercontent.com/79084294/147274665-9ca1bc8c-7f7a-45e6-9cd3-5a3bcc79570e.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
