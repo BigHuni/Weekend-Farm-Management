@@ -10,30 +10,46 @@
 ## 🔸 필수 요소
 - 시민(Citizen)
   - 농장 관리 서비스를 이용할 시민이 존재한다. 
+
+
 - 작물(Crop)
   - 관리할 작물이 존재한다.
+
+
 - 환경(Environment)
   - 작물에 관련된 정보를 제공할 환경이 존재한다. 
+
+
 - 배송(Delivery)
   - 작물을 제공받을 장소가 존재한다.
+
+
 <br>
 
 ## 🔸 사용자 요구사항 명세
 - 시민(Citizen)
   - 시민에게 아이디(ID)를 부여하여 식별
   - 서비스를 제공받을 거주지(District) 선정
+
+
 - 작물(Crop)
   - 작물의 이름(Name) 정보 제공
   - 작물의 기한(Expiration) 서비스 제공
   - 작물의 과일, 채소 분류(Division) 정보 제공
+
+
 - 환경(Environment)
   - 작물의 이름(Name) 정보 제공
   - 작물의 최적 온도(Temperature) 정보 제공
   - 작물의 최적 습도(Humidity) 정보 제공
+
+
 - 배송(Delivery)
   - 작물을 이름(Name) 정보 제공
   - 작물의 기한(Expiration) 서비스 제공
   - 배송할 거주지(District) 선정
+
+
 <br>
 
 ## 🔸 ERD 설계
@@ -41,42 +57,43 @@
 <br>
 
 ## 🔸 DB 내 최종 데이터 확인
-<img width="539" alt="db1" src="https://user-images.githubusercontent.com/79084294/147271316-3a2b9b40-ac30-4358-aeb0-28589f5b5353.png">
+<img width="540" alt="db1" src="https://user-images.githubusercontent.com/79084294/147271316-3a2b9b40-ac30-4358-aeb0-28589f5b5353.png">
 
-<img width="539" alt="db2" src="https://user-images.githubusercontent.com/79084294/147271389-b134d570-6aca-43d2-ae7b-af7c30a29f82.png">
+<img width="540" alt="db2" src="https://user-images.githubusercontent.com/79084294/147271389-b134d570-6aca-43d2-ae7b-af7c30a29f82.png">
 <br>
 
 ## 🔸 비즈니스 로직 SQL 작성 (10문)
 - 1. 주말 농장에서 이용하는 채소 작물 이름을 조회
-<img width="260" alt="로직1" src="https://user-images.githubusercontent.com/79084294/147271636-259c5143-471c-4db3-937c-94af1d4ba96c.png">
+  <img width="245" alt="로직1" src="https://user-images.githubusercontent.com/79084294/147303967-7dd27c6e-aaee-4420-9894-01bbb3d19495.png">
 
 - 2. 주말 농장에서 이용하는 과일 작물 이름을 조회
-<img width="244" alt="로직2" src="https://user-images.githubusercontent.com/79084294/147271777-65904618-e3bb-4173-bae6-c391eabfebd6.png">
+  <img width="245" alt="로직2" src="https://user-images.githubusercontent.com/79084294/147271777-65904618-e3bb-4173-bae6-c391eabfebd6.png">
 
 - 3. 거주지가 도계읍으로 등록된 사람들의 ID를 조회
-<img width="233" alt="로직3" src="https://user-images.githubusercontent.com/79084294/147271886-1ba0cf00-ab4c-425c-84ee-385b783ea659.png">
+  <img width="245" alt="로직3" src="https://user-images.githubusercontent.com/79084294/147271886-1ba0cf00-ab4c-425c-84ee-385b783ea659.png">
 
 - 4. 거주지가 마달동으로 등록된 사람들의 ID를 조회
-<img width="233" alt="로직4" src="https://user-images.githubusercontent.com/79084294/147271998-c395c933-3626-499f-b7fe-2b6b24cd7acb.png">
+  <img width="245" alt="로직4" src="https://user-images.githubusercontent.com/79084294/147271998-c395c933-3626-499f-b7fe-2b6b24cd7acb.png">
 
 - 5. 작물 생육 온도가 15℃ 이상인 작물의 이름을 조회
-<img width="249" alt="로직5" src="https://user-images.githubusercontent.com/79084294/147272330-5194614b-0ae1-4b61-ac96-68970ea60f97.png">
+  <img width="245" alt="로직5" src="https://user-images.githubusercontent.com/79084294/147272330-5194614b-0ae1-4b61-ac96-68970ea60f97.png">
 
 - 6. 작물 생육 습도가 75% 미만인 작물의 이름을 조회
-<img width="249" alt="로직6" src="https://user-images.githubusercontent.com/79084294/147272349-db19ae3a-fd96-4ce1-8a7e-90c66f47ebea.png">
+  <img width="245" alt="로직6" src="https://user-images.githubusercontent.com/79084294/147272349-db19ae3a-fd96-4ce1-8a7e-90c66f47ebea.png">
 
 - 7. 채소 혹은 과일을 재배하는지 알기 위해 회원(ID)별 Division을 조회 [테이블 JOIN]
-<img width="273" alt="로직7" src="https://user-images.githubusercontent.com/79084294/147272365-a832dd76-2817-4dd1-b85d-e52655866805.png">
+  <img width="275" alt="로직7" src="https://user-images.githubusercontent.com/79084294/147272365-a832dd76-2817-4dd1-b85d-e52655866805.png">
 
 - 8. 회원(ID)별 생육하는 작물 이름을 조회 [테이블 JOIN]
-<img width="273" alt="로직8" src="https://user-images.githubusercontent.com/79084294/147272386-b7bb58d7-5c2e-4ab6-be22-f24e7ee4725e.png">
+  <img width="275" alt="로직8" src="https://user-images.githubusercontent.com/79084294/147272386-b7bb58d7-5c2e-4ab6-be22-f24e7ee4725e.png">
 
 - 9. 회원(ID)별 생육하는 작물 이름을 알파벳 오름차순 정렬 [테이블 JOIN]
-<img width="266" alt="로직9" src="https://user-images.githubusercontent.com/79084294/147272400-33e94392-811c-438b-935e-c807d2a35c2c.png">
+  <img width="275" alt="로직9" src="https://user-images.githubusercontent.com/79084294/147272400-33e94392-811c-438b-935e-c807d2a35c2c.png">
 
 - 10. 회원(ID)별 생육하는 작물 이름을 알파벳 내림차순 정렬 [테이블 JOIN]
-<img width="266" alt="로직10" src="https://user-images.githubusercontent.com/79084294/147272412-bba724c2-9645-4074-8496-5a9997d64671.png">
+  <img width="275" alt="로직10" src="https://user-images.githubusercontent.com/79084294/147272412-bba724c2-9645-4074-8496-5a9997d64671.png">
 <br>
+
 
 ## 🔸 JDBC Handler&Mnt 구현 파일 구성
 - FarmManagement Project
